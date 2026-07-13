@@ -1,0 +1,30 @@
+SITE: OAB Guarapuava — Central de Solicitação de Arte
+
+O que este projeto faz:
+- Mostra uma página simples e institucional para a OAB Guarapuava.
+- Abre um formulário de solicitação de arte em 7 etapas.
+- Ao final, monta uma mensagem pronta e abre no WhatsApp.
+- Pode ser editado visualmente pelo Pages CMS.
+
+ANTES DE PUBLICAR:
+1. No Pages CMS, abra “Textos, logo e contato”.
+2. Preencha o campo “Número do WhatsApp” com o número de destino, apenas com números.
+   Ex.: 5542999999999
+3. Se quiser, envie uma logo em “Imagens do site” e selecione essa logo no campo “Logo do site”.
+
+ESTRUTURA PRINCIPAL:
+- index.html -> página do site
+- styles.css -> visual do site
+- script.js -> lógica do formulário
+- content/site.json -> textos da página
+- content/form.json -> textos e opções do formulário
+- .pages.yml -> configuração do Pages CMS
+
+ATUALIZAÇÃO NO GITHUB:
+- Basta substituir os arquivos do repositório por estes.
+- O Cloudflare vai republicar automaticamente.
+
+NOVO CONTROLE:
+- Antes da etapa 1, o formulário pergunta se a solicitação já foi aprovada pela Presidência.
+- Se a resposta for SIM, o formulário é bloqueado.
+- Se a resposta for NÃO, o preenchimento normal é liberado.

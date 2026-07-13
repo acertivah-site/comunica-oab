@@ -1,0 +1,243 @@
+media:
+  - name: images
+    label: Imagens do site
+    input: assets/uploads
+    output: /assets/uploads
+    rename: safe
+    categories: [image]
+
+content:
+  - name: site
+    label: Textos, logo e contato
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - { name: brand_name, label: Nome principal, type: string, required: true }
+      - { name: brand_subtitle, label: Subtítulo da marca, type: string }
+      - name: logo
+        label: Logo do site
+        type: image
+        options:
+          media: images
+      - { name: whatsapp_number, label: Número do WhatsApp, type: string, description: "Use apenas números. Ex.: 5542999999999" }
+      - { name: meta_title, label: Título da aba do navegador, type: string }
+      - { name: meta_description, label: Descrição do site, type: text }
+      - name: hero
+        label: Primeira tela
+        type: object
+        fields:
+          - { name: eyebrow, label: Texto pequeno, type: string }
+          - { name: title, label: Título principal, type: text }
+          - { name: description, label: Descrição, type: text }
+          - { name: primary_button, label: Botão principal, type: string }
+          - { name: secondary_button, label: Botão secundário, type: string }
+          - { name: card_label, label: Rótulo do cartão lateral, type: string }
+          - { name: card_title, label: Título do cartão lateral, type: text }
+          - { name: card_description, label: Texto do cartão lateral, type: text }
+      - name: cards_section
+        label: Seção de orientações
+        type: object
+        fields:
+          - { name: eyebrow, label: Texto pequeno, type: string }
+          - { name: title, label: Título, type: text }
+          - { name: description, label: Descrição, type: text }
+      - name: info_cards
+        label: Cards de orientação
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - { name: icon, label: Número/ícone, type: string }
+          - { name: title, label: Título do card, type: string }
+          - { name: description, label: Descrição do card, type: text }
+      - name: flow_section
+        label: Seção como funciona
+        type: object
+        fields:
+          - { name: eyebrow, label: Texto pequeno, type: string }
+          - { name: title, label: Título, type: text }
+          - { name: description, label: Descrição, type: text }
+      - name: flow_steps
+        label: Etapas de funcionamento
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - { name: title, label: Título da etapa, type: string }
+          - { name: description, label: Descrição da etapa, type: text }
+      - name: cta
+        label: Chamada final
+        type: object
+        fields:
+          - { name: eyebrow, label: Texto pequeno, type: string }
+          - { name: title, label: Título, type: text }
+          - { name: button, label: Botão, type: string }
+      - name: footer
+        label: Rodapé
+        type: object
+        fields:
+          - { name: title, label: Título do rodapé, type: string }
+          - { name: description, label: Texto do rodapé, type: text }
+
+  - name: form
+    label: Formulário de solicitação
+    type: file
+    path: content/form.json
+    format: json
+    fields:
+      - name: modal
+        label: Cabeçalho do formulário
+        type: object
+        fields:
+          - { name: eyebrow, label: Texto pequeno, type: string }
+          - { name: title, label: Título principal, type: string }
+      - name: approval_gate
+        label: Confirmação inicial — aprovação da Presidência
+        type: object
+        fields:
+          - { name: kicker, label: Texto pequeno, type: string }
+          - { name: question, label: Pergunta, type: text }
+          - { name: description, label: Descrição, type: text }
+          - { name: yes_label, label: Texto do botão Sim, type: string }
+          - { name: no_label, label: Texto do botão Não, type: string }
+          - { name: blocked_title, label: Título quando marcar Sim, type: string }
+          - { name: blocked_message, label: Mensagem de bloqueio ao marcar Sim, type: text }
+          - { name: allowed_message, label: Mensagem ao marcar Não, type: text }
+      - name: step1
+        label: Etapa 1 — Solicitante
+        type: object
+        fields:
+          - { name: title, label: Título da etapa, type: string }
+          - { name: description, label: Descrição da etapa, type: text }
+          - { name: nome_label, label: Nome — rótulo, type: string }
+          - { name: nome_placeholder, label: Nome — exemplo, type: string }
+          - { name: setor_label, label: Comissão/setor — rótulo, type: string }
+          - { name: setor_placeholder, label: Comissão/setor — exemplo, type: string }
+          - { name: whatsapp_label, label: WhatsApp — rótulo, type: string }
+          - { name: whatsapp_placeholder, label: WhatsApp — exemplo, type: string }
+      - name: step2
+        label: Etapa 2 — Sobre a arte
+        type: object
+        fields:
+          - { name: title, label: Título da etapa, type: string }
+          - { name: description, label: Descrição da etapa, type: text }
+          - { name: projeto_label, label: Projeto — rótulo, type: string }
+          - { name: projeto_placeholder, label: Projeto — exemplo, type: string }
+          - { name: tipo_label, label: Tipo — rótulo, type: string }
+          - { name: tipo_placeholder, label: Tipo — primeira opção, type: string }
+          - name: tipo_options
+            label: Opções de tipo
+            type: string
+            list: true
+          - { name: canal_label, label: Canal — rótulo, type: string }
+          - { name: canal_placeholder, label: Canal — primeira opção, type: string }
+          - name: canal_options
+            label: Opções de canal
+            type: string
+            list: true
+          - { name: objetivo_label, label: Objetivo — rótulo, type: string }
+          - { name: objetivo_placeholder, label: Objetivo — exemplo, type: string }
+          - { name: publico_label, label: Público — rótulo, type: string }
+          - { name: publico_placeholder, label: Público — exemplo, type: string }
+      - name: step3
+        label: Etapa 3 — Conteúdo
+        type: object
+        fields:
+          - { name: title, label: Título da etapa, type: string }
+          - { name: description, label: Descrição da etapa, type: text }
+          - { name: texto_label, label: Texto da arte — rótulo, type: string }
+          - { name: texto_placeholder, label: Texto da arte — exemplo, type: string }
+          - { name: texto_pendente_label, label: Texto ainda não pronto — opção, type: string }
+          - { name: obrigatorias_label, label: Informações obrigatórias — rótulo, type: string }
+          - { name: obrigatorias_placeholder, label: Informações obrigatórias — exemplo, type: string }
+          - { name: destaque_label, label: Destaque — rótulo, type: string }
+          - { name: destaque_placeholder, label: Destaque — exemplo, type: string }
+      - name: step4
+        label: Etapa 4 — Direção visual
+        type: object
+        fields:
+          - { name: title, label: Título da etapa, type: string }
+          - { name: description, label: Descrição da etapa, type: text }
+          - { name: style_legend, label: Título das características, type: string }
+          - name: style_options
+            label: Características disponíveis
+            type: string
+            list: true
+          - { name: colors_legend, label: Título das cores, type: string }
+          - name: color_options
+            label: Cores disponíveis
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{label}"
+            fields:
+              - { name: label, label: Nome mostrado, type: string }
+              - { name: value, label: Valor enviado no WhatsApp, type: string }
+              - name: swatch
+                label: Aparência da bolinha de cor
+                type: select
+                options:
+                  values:
+                    - { name: navy, label: Azul-marinho }
+                    - { name: red, label: Vermelho }
+                    - { name: burgundy, label: Bordô }
+                    - { name: white, label: Branco }
+                    - { name: gray, label: Cinza }
+                    - { name: gold, label: Dourado }
+                    - { name: silver, label: Prata }
+                    - { name: spectrum, label: Multicolorido }
+          - { name: evitar_label, label: O que evitar — rótulo, type: string }
+          - { name: evitar_placeholder, label: O que evitar — exemplo, type: string }
+      - name: step5
+        label: Etapa 5 — Referência
+        type: object
+        fields:
+          - { name: title, label: Título da etapa, type: string }
+          - { name: description, label: Descrição da etapa, type: text }
+          - { name: referencia_link_label, label: Link de referência — rótulo, type: string }
+          - { name: referencia_link_placeholder, label: Link de referência — exemplo, type: string }
+          - { name: referencia_obs_label, label: Observações sobre a referência — rótulo, type: string }
+          - { name: referencia_obs_placeholder, label: Observações sobre a referência — exemplo, type: string }
+          - { name: note, label: Aviso sobre referências, type: text }
+      - name: step6
+        label: Etapa 6 — Prazo
+        type: object
+        fields:
+          - { name: title, label: Título da etapa, type: string }
+          - { name: description, label: Descrição da etapa, type: text }
+          - { name: prazo_label, label: Data desejada — rótulo, type: string }
+          - { name: data_critica_label, label: Data do evento/publicação — rótulo, type: string }
+          - { name: data_critica_placeholder, label: Data do evento/publicação — exemplo, type: string }
+          - { name: observacoes_label, label: Observações — rótulo, type: string }
+          - { name: observacoes_placeholder, label: Observações — exemplo, type: string }
+      - name: step7
+        label: Etapa 7 — Revisão
+        type: object
+        fields:
+          - { name: title, label: Título da etapa, type: string }
+          - { name: description, label: Descrição da etapa, type: text }
+          - { name: confirmation, label: Texto de confirmação, type: text }
+      - name: buttons
+        label: Botões do formulário
+        type: object
+        fields:
+          - { name: back, label: Botão voltar, type: string }
+          - { name: next, label: Botão continuar, type: string }
+          - { name: submit, label: Botão enviar, type: string }
+      - name: messages
+        label: Mensagens automáticas
+        type: object
+        fields:
+          - { name: required_error, label: Erro de campo obrigatório, type: string }
+          - { name: style_limit, label: Aviso do limite de estilos, type: string }
+          - { name: success, label: Mensagem de sucesso, type: string }
+
+settings:
+  content:
+    merge: true

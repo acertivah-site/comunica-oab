@@ -1,0 +1,165 @@
+{
+  "modal": {
+    "eyebrow": "Formulário guiado",
+    "title": "Solicitação de arte"
+  },
+  "approval_gate": {
+    "kicker": "Confirmação inicial",
+    "question": "Essa solicitação de arte já foi aprovada pela Presidência?",
+    "description": "Selecione uma opção para continuar.",
+    "yes_label": "Sim",
+    "no_label": "Não",
+    "blocked_title": "Solicitação ainda não aprovada",
+    "blocked_message": "Esta solicitação precisa ser aprovada pela Presidência antes do envio do pedido de arte. Não é possível continuar o preenchimento neste momento.",
+    "allowed_message": "Certo. Como a solicitação já foi aprovada pela Presidência, você pode continuar."
+  },
+  "step1": {
+    "title": "Quem está solicitando?",
+    "description": "Identifique a pessoa e a comissão, diretoria ou setor responsável pelo pedido.",
+    "nome_label": "Nome completo *",
+    "nome_placeholder": "Seu nome",
+    "setor_label": "Comissão, diretoria ou setor *",
+    "setor_placeholder": "Ex.: Comissão de Direito de Família",
+    "whatsapp_label": "WhatsApp *",
+    "whatsapp_placeholder": "(00) 00000-0000"
+  },
+  "step2": {
+    "title": "Sobre a arte",
+    "description": "Explique o tipo de peça, onde será usada e o objetivo do pedido.",
+    "projeto_label": "Nome da arte, campanha ou evento *",
+    "projeto_placeholder": "Ex.: Divulgação de palestra",
+    "tipo_label": "Tipo de material *",
+    "tipo_placeholder": "Selecione",
+    "tipo_options": [
+      "Post para Instagram",
+      "Story",
+      "Carrossel",
+      "Convite digital",
+      "Banner",
+      "Arte institucional",
+      "Apresentação",
+      "Outro"
+    ],
+    "canal_label": "Onde será utilizado? *",
+    "canal_placeholder": "Selecione",
+    "canal_options": [
+      "Instagram Feed",
+      "Instagram Stories",
+      "WhatsApp",
+      "Site",
+      "Telão / apresentação",
+      "Impressão",
+      "Outro"
+    ],
+    "objetivo_label": "Objetivo principal *",
+    "objetivo_placeholder": "Ex.: convidar advogados para o evento",
+    "publico_label": "Público da comunicação",
+    "publico_placeholder": "Ex.: advocacia, estudantes, público geral"
+  },
+  "step3": {
+    "title": "Conteúdo",
+    "description": "Insira o texto e as informações essenciais da arte.",
+    "texto_label": "Texto da arte",
+    "texto_placeholder": "Cole aqui o texto da arte",
+    "texto_pendente_label": "Ainda não tenho o texto final",
+    "obrigatorias_label": "Informações obrigatórias",
+    "obrigatorias_placeholder": "Data, horário, local, palestrante, link, inscrições...",
+    "destaque_label": "O que precisa receber mais destaque?",
+    "destaque_placeholder": "Ex.: data do evento, palestrante, chamada principal"
+  },
+  "step4": {
+    "title": "Direção visual",
+    "description": "Indique o estilo desejado e qualquer observação estética importante.",
+    "style_legend": "Escolha até 4 características",
+    "style_options": [
+      "Institucional",
+      "Elegante",
+      "Minimalista",
+      "Moderna",
+      "Séria",
+      "Criativa",
+      "Formal",
+      "Acolhedora",
+      "Sóbria",
+      "Objetiva"
+    ],
+    "colors_legend": "Cores desejadas",
+    "color_options": [
+      {
+        "label": "Azul-marinho",
+        "value": "Azul-marinho",
+        "swatch": "navy"
+      },
+      {
+        "label": "Vermelho",
+        "value": "Vermelho",
+        "swatch": "red"
+      },
+      {
+        "label": "Bordô",
+        "value": "Bordô",
+        "swatch": "burgundy"
+      },
+      {
+        "label": "Branco",
+        "value": "Branco",
+        "swatch": "white"
+      },
+      {
+        "label": "Cinza",
+        "value": "Cinza",
+        "swatch": "gray"
+      },
+      {
+        "label": "Dourado",
+        "value": "Dourado",
+        "swatch": "gold"
+      },
+      {
+        "label": "Prata",
+        "value": "Prata",
+        "swatch": "silver"
+      },
+      {
+        "label": "Direção livre",
+        "value": "Direção livre",
+        "swatch": "spectrum"
+      }
+    ],
+    "evitar_label": "Existe algo que devemos evitar?",
+    "evitar_placeholder": "Opcional"
+  },
+  "step5": {
+    "title": "Referência",
+    "description": "Em vez de anexos, cole um link com a inspiração ou referência visual.",
+    "referencia_link_label": "Link de inspiração ou referência",
+    "referencia_link_placeholder": "https://...",
+    "referencia_obs_label": "O que você gostou nessa referência?",
+    "referencia_obs_placeholder": "Ex.: gostei da organização, da paleta de cores ou da hierarquia das informações",
+    "note": "As referências servem apenas para orientar o estilo desejado."
+  },
+  "step6": {
+    "title": "Prazo",
+    "description": "Informe a data ideal e qualquer observação importante sobre urgência.",
+    "prazo_label": "Data desejada para entrega *",
+    "data_critica_label": "Data do evento/publicação",
+    "data_critica_placeholder": "Ex.: evento em 25/07",
+    "observacoes_label": "Observações finais",
+    "observacoes_placeholder": "Urgência, prioridade, contexto interno ou qualquer detalhe importante"
+  },
+  "step7": {
+    "title": "Revisão final",
+    "description": "Confira as informações antes de abrir a mensagem no WhatsApp.",
+    "confirmation": "Confirmo que as informações estão corretas e entendo que o pedido será analisado após o envio."
+  },
+  "buttons": {
+    "back": "Voltar",
+    "next": "Continuar",
+    "submit": "Enviar pelo WhatsApp"
+  },
+  "messages": {
+    "required_error": "Preencha os campos obrigatórios para continuar.",
+    "style_limit": "Escolha no máximo 4 características.",
+    "success": "Solicitação pronta para envio no WhatsApp."
+  }
+}

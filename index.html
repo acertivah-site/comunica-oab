@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f2742" />
+  <meta name="description" id="meta-description" content="Central de Solicitação de Arte da OAB Subseção de Guarapuava." />
+  <title id="page-title">Solicitação de Arte | OAB Guarapuava</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Voltar ao início">
+        <img id="brand-logo" src="" alt="Logo" hidden />
+        <div class="brand-text">
+          <strong id="brand-name">OAB Guarapuava</strong>
+          <span id="brand-subtitle">Central de Solicitação de Arte</span>
+        </div>
+      </a>
+      <button class="btn btn-primary btn-header" type="button" data-open-project>Nova solicitação</button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow" id="hero-eyebrow">OAB Subseção de Guarapuava</span>
+          <h1 id="hero-title">Solicite sua arte de forma organizada, rápida e sem briefing confuso.</h1>
+          <p id="hero-description">Esta central foi criada para receber pedidos de arte da diretoria, comissões e setores da OAB Guarapuava com todas as informações necessárias para a criação.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" type="button" data-open-project id="hero-primary-button">Começar solicitação</button>
+            <a class="btn btn-secondary" href="#orientacoes" id="hero-secondary-button">Ver orientações</a>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-card">
+            <span class="card-label" id="hero-card-label">Fluxo interno</span>
+            <h2 id="hero-card-title">Pedido estruturado = criação mais rápida.</h2>
+            <p id="hero-card-description">Preencha o formulário com objetivo, conteúdo, prazo e referência. Ao final, a solicitação é enviada automaticamente pelo WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="orientacoes">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow" id="cards-eyebrow">Antes de solicitar</span>
+          <h2 id="cards-title">Organize as informações principais antes de abrir o pedido.</h2>
+          <p id="cards-description">Quanto mais completo vier o pedido, mais fácil fica analisar o prazo e criar a arte com fidelidade ao objetivo.</p>
+        </div>
+        <div class="info-grid" id="info-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="como-funciona">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow" id="flow-eyebrow">Como funciona</span>
+          <h2 id="flow-title">Um fluxo simples para receber e organizar cada solicitação.</h2>
+          <p id="flow-description">O processo abaixo ajuda a evitar retrabalho e centraliza as informações essenciais do pedido.</p>
+        </div>
+        <ol class="flow-list" id="flow-list"></ol>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container cta-box">
+        <div>
+          <span class="eyebrow" id="cta-eyebrow">Solicitação interna</span>
+          <h2 id="cta-title">Quando estiver com as informações em mãos, abra o formulário e envie o pedido.</h2>
+        </div>
+        <button class="btn btn-light" type="button" data-open-project id="cta-button">Abrir formulário</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong id="footer-title">OAB Guarapuava — Solicitação de Arte</strong>
+        <p id="footer-description">Canal interno para organização de pedidos de arte da Subseção de Guarapuava.</p>
+      </div>
+      <a href="#topo">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true">
+    <section class="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-title">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow" id="modal-eyebrow">Formulário guiado</span>
+          <h2 id="project-title">Solicitação de arte</h2>
+        </div>
+        <button class="modal-close" type="button" aria-label="Fechar formulário">×</button>
+      </div>
+
+      <section class="approval-gate" id="approval-gate" aria-labelledby="approval-question">
+        <span class="approval-kicker" id="approval-kicker">Confirmação inicial</span>
+        <h3 id="approval-question">Essa solicitação de arte já foi aprovada pela Presidência?</h3>
+        <p class="approval-description" id="approval-description">Selecione uma opção para continuar.</p>
+
+        <div class="approval-options" role="group" aria-label="Aprovação da Presidência">
+          <button class="approval-choice" type="button" data-approval="yes" id="approval-yes">Sim</button>
+          <button class="approval-choice" type="button" data-approval="no" id="approval-no">Não</button>
+        </div>
+
+        <div class="approval-result" id="approval-result" hidden aria-live="polite">
+          <strong id="approval-result-title"></strong>
+          <p id="approval-result-message"></p>
+        </div>
+      </section>
+
+      <div class="progress-wrap" id="form-progress" aria-label="Progresso do formulário" hidden>
+        <div class="progress-track"><div class="progress-bar" id="progress-bar"></div></div>
+        <span id="progress-text">Etapa 1 de 7</span>
+      </div>
+
+      <form id="project-form" novalidate hidden>
+        <div class="form-step active" data-step="1">
+          <div class="step-intro"><span class="step-number">01</span><div><h3 id="step1-title">Quem está solicitando?</h3><p id="step1-description">Identifique a pessoa e a comissão, diretoria ou setor responsável pelo pedido.</p></div></div>
+          <div class="form-grid">
+            <label class="field full"><span id="step1-nome-label">Nome completo *</span><input type="text" name="nome" required placeholder="Seu nome" /></label>
+            <label class="field"><span id="step1-setor-label">Comissão, diretoria ou setor *</span><input type="text" name="setor" required placeholder="Ex.: Comissão de Direito de Família" /></label>
+            <label class="field"><span id="step1-whatsapp-label">WhatsApp *</span><input type="tel" name="whatsapp" required placeholder="(00) 00000-0000" /></label>
+          </div>
+        </div>
+
+        <div class="form-step" data-step="2">
+          <div class="step-intro"><span class="step-number">02</span><div><h3 id="step2-title">Sobre a arte</h3><p id="step2-description">Explique o tipo de peça, onde será usada e o objetivo do pedido.</p></div></div>
+          <div class="form-grid">
+            <label class="field full"><span id="step2-projeto-label">Nome da arte, campanha ou evento *</span><input type="text" name="projeto" required placeholder="Ex.: Divulgação de palestra" /></label>
+            <label class="field"><span id="step2-tipo-label">Tipo de material *</span><select name="tipo" required id="tipo-select"></select></label>
+            <label class="field"><span id="step2-canal-label">Onde será utilizado? *</span><select name="canal" required id="canal-select"></select></label>
+            <label class="field full"><span id="step2-objetivo-label">Objetivo principal *</span><input type="text" name="objetivo" required placeholder="Ex.: convidar advogados para o evento" /></label>
+            <label class="field full"><span id="step2-publico-label">Público da comunicação</span><input type="text" name="publico" placeholder="Ex.: advocacia, estudantes, público geral" /></label>
+          </div>
+        </div>
+
+        <div class="form-step" data-step="3">
+          <div class="step-intro"><span class="step-number">03</span><div><h3 id="step3-title">Conteúdo</h3><p id="step3-description">Insira o texto e as informações essenciais da arte.</p></div></div>
+          <div class="form-grid">
+            <label class="field full"><span id="step3-texto-label">Texto da arte</span><textarea name="texto" rows="6" placeholder="Cole aqui o texto da arte"></textarea></label>
+            <label class="field full checkbox-inline"><input type="checkbox" name="texto_pendente" /><span id="step3-texto-pendente-label">Ainda não tenho o texto final</span></label>
+            <label class="field full"><span id="step3-obrigatorias-label">Informações obrigatórias</span><textarea name="obrigatorias" rows="4" placeholder="Data, horário, local, palestrante, link, inscrições..."></textarea></label>
+            <label class="field full"><span id="step3-destaque-label">O que precisa receber mais destaque?</span><input type="text" name="destaque" placeholder="Ex.: data do evento, palestrante, chamada principal" /></label>
+          </div>
+        </div>
+
+        <div class="form-step" data-step="4">
+          <div class="step-intro"><span class="step-number">04</span><div><h3 id="step4-title">Direção visual</h3><p id="step4-description">Indique o estilo desejado e qualquer observação estética importante.</p></div></div>
+          <div class="form-stack">
+            <fieldset class="choice-group">
+              <legend id="step4-style-legend">Escolha até 4 características</legend>
+              <div class="chip-grid" id="style-options"></div>
+            </fieldset>
+            <fieldset class="choice-group">
+              <legend id="step4-colors-legend">Cores desejadas</legend>
+              <div class="color-grid" id="color-options"></div>
+            </fieldset>
+            <label class="field full"><span id="step4-evitar-label">Existe algo que devemos evitar?</span><input type="text" name="evitar" placeholder="Opcional" /></label>
+          </div>
+        </div>
+
+        <div class="form-step" data-step="5">
+          <div class="step-intro"><span class="step-number">05</span><div><h3 id="step5-title">Referência</h3><p id="step5-description">Em vez de anexos, cole um link com a inspiração ou referência visual.</p></div></div>
+          <div class="form-grid">
+            <label class="field full"><span id="step5-referencia-link-label">Link de inspiração ou referência</span><input type="url" name="referencia_link" placeholder="https://..." /></label>
+            <label class="field full"><span id="step5-referencia-obs-label">O que você gostou nessa referência?</span><textarea name="referencia_obs" rows="5" placeholder="Ex.: gostei da organização, da paleta de cores ou da hierarquia das informações"></textarea></label>
+          </div>
+          <p class="step-note" id="step5-note">As referências servem apenas para orientar o estilo desejado.</p>
+        </div>
+
+        <div class="form-step" data-step="6">
+          <div class="step-intro"><span class="step-number">06</span><div><h3 id="step6-title">Prazo</h3><p id="step6-description">Informe a data ideal e qualquer observação importante sobre urgência.</p></div></div>
+          <div class="form-grid">
+            <label class="field"><span id="step6-prazo-label">Data desejada para entrega *</span><input type="date" name="prazo" required /></label>
+            <label class="field"><span id="step6-data-critica-label">Data do evento/publicação</span><input type="text" name="data_critica" placeholder="Ex.: evento em 25/07" /></label>
+            <label class="field full"><span id="step6-observacoes-label">Observações finais</span><textarea name="observacoes" rows="5" placeholder="Urgência, prioridade, contexto interno ou qualquer detalhe importante"></textarea></label>
+          </div>
+        </div>
+
+        <div class="form-step" data-step="7">
+          <div class="step-intro"><span class="step-number">07</span><div><h3 id="step7-title">Revisão final</h3><p id="step7-description">Confira as informações antes de abrir a mensagem no WhatsApp.</p></div></div>
+          <div class="review-box" id="review-box"></div>
+          <label class="field checkbox-inline confirm-check"><input type="checkbox" name="confirmacao" required /><span id="step7-confirmation">Confirmo que as informações estão corretas.</span></label>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-secondary" type="button" id="prev-step">Voltar</button>
+          <button class="btn btn-primary" type="button" id="next-step">Continuar</button>
+          <button class="btn btn-primary" type="submit" id="submit-step" hidden>Enviar pelo WhatsApp</button>
+        </div>
+        <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
+      </form>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

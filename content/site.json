@@ -1,0 +1,72 @@
+{
+  "brand_name": "OAB Guarapuava",
+  "brand_subtitle": "Central de Solicitação de Arte",
+  "logo": "/assets/uploads/oab-guarapuava-logo.png",
+  "meta_title": "Solicitação de Arte | OAB Guarapuava",
+  "meta_description": "Central interna da OAB Subseção de Guarapuava para recebimento de solicitações de arte.",
+  "whatsapp_number": "",
+  "hero": {
+    "eyebrow": "OAB Subseção de Guarapuava",
+    "title": "Solicite sua arte de forma organizada, rápida e sem briefing confuso.",
+    "description": "Esta central foi criada para receber pedidos de arte da diretoria, comissões e setores da OAB Guarapuava com todas as informações necessárias para a criação.",
+    "primary_button": "Começar solicitação",
+    "secondary_button": "Ver orientações",
+    "card_label": "Fluxo interno",
+    "card_title": "Pedido estruturado = criação mais rápida.",
+    "card_description": "Preencha o formulário com objetivo, conteúdo, prazo e referência. Ao final, a solicitação é enviada automaticamente pelo WhatsApp."
+  },
+  "cards_section": {
+    "eyebrow": "Antes de solicitar",
+    "title": "Organize as informações principais antes de abrir o pedido.",
+    "description": "Quanto mais completo vier o pedido, mais fácil fica analisar o prazo e criar a arte com fidelidade ao objetivo."
+  },
+  "info_cards": [
+    {
+      "icon": "01",
+      "title": "Objetivo claro",
+      "description": "Informe com precisão o que a arte precisa comunicar e qual resultado se espera dela."
+    },
+    {
+      "icon": "02",
+      "title": "Conteúdo organizado",
+      "description": "Tenha em mãos texto, nomes, data, horário, local, links e demais informações obrigatórias."
+    },
+    {
+      "icon": "03",
+      "title": "Prazo realista",
+      "description": "Informe a data desejada e também a data do evento ou da publicação para facilitar a análise da demanda."
+    }
+  ],
+  "flow_section": {
+    "eyebrow": "Como funciona",
+    "title": "Um fluxo simples para receber e organizar cada solicitação.",
+    "description": "O processo abaixo ajuda a evitar retrabalho e centraliza as informações essenciais do pedido."
+  },
+  "flow_steps": [
+    {
+      "title": "Você preenche o formulário",
+      "description": "A comissão, diretoria ou setor informa o contexto do pedido e os detalhes da arte."
+    },
+    {
+      "title": "A solicitação é enviada no WhatsApp",
+      "description": "Ao final, o sistema organiza tudo e abre uma mensagem pronta para envio."
+    },
+    {
+      "title": "O pedido é analisado",
+      "description": "Prazo, complexidade e informações enviadas são conferidos antes da produção."
+    },
+    {
+      "title": "A criação segue para desenvolvimento",
+      "description": "Com o briefing completo, a criação da arte fica mais eficiente e objetiva."
+    }
+  ],
+  "cta": {
+    "eyebrow": "Solicitação interna",
+    "title": "Quando estiver com as informações em mãos, abra o formulário e envie o pedido.",
+    "button": "Abrir formulário"
+  },
+  "footer": {
+    "title": "OAB Guarapuava — Solicitação de Arte",
+    "description": "Canal interno para organização de pedidos de arte da Subseção de Guarapuava."
+  }
+}
